@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React assignment</title>
+    <link rel="stylesheet" href="React_assignment.css">
+</head>
+<body>
+
+    <div class="facts"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        ReactDOM.render(
+            <div>
+            <Head/>
+            <Fun/>
+            </div>
+        ,document.querySelector(".facts"));
+        function Head(){
+            return(
+                <div class="header">
+                    <img src="reactjs-icon.png" alt="reactjs-icon.png"/> 
+                    <h4>ReactFacts</h4>   
+                    <h5>React Course - Project 1</h5>
+                </div>
+            )
+        }
+        function Fun(){
+            return (
+                <div class="main">
+                <h2>Fun facts about React</h2>
+                <ul>
+                    <li>Was first released in 2013</li>
+                    <li>Was originally created by Jordan Walke</li>
+                    <li>Has well over 100K stars on GitHub</li>
+                    <li>Is maintained by Facebook</li>
+                    <li>Powers thousands of enterprise apps, including <br/> mobile apps</li>
+                </ul>
+                </div>
+            )
+        }
+    </script>
+</body>
+</html>

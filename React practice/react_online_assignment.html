@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React online assignment for figma</title>
+    <link rel="stylesheet" href="react_online_assignment.css">
+</head>
+<body>
+    <div id="air"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        ReactDOM.render(
+            <div className="container" >
+                <Head/>
+                <Main/>
+                <Online/>
+                <Sold/>
+            </div>,
+            document.getElementById("air")
+        );
+        function Head(){
+            return (
+                <header>
+                    <div className="head" >
+                        <img src="airbnb 1.png" alt="airbnb logo"/>
+                    </div>
+                </header>
+            )
+        };
+        function Main(){
+            return (
+                <section>
+                    <div className="main">
+                        <img src="Group 77.png" alt="Main page logo"/>
+                    </div>
+                </section>
+            )
+        };
+        function Online(){
+            return (
+                <section>
+                    <div className="middle">
+                        <h3>Online Experiences</h3>
+                        <p>Join unique interactive activities led by one-of-a-kind hosts—all without leaving home.</p>
+                    </div>
+                </section>
+            )
+        };
+        function Sold(){
+            return (
+                <section>
+                    <div className="foot">
+                        <Package image="image 12.png" rating={5.0} paragraph="Life lessons with Katie Zaferes" price={136} view="(6)" />
+                        <Package image="image 13.png" rating={5.0} paragraph="Learn wedding photography" price={125} view="(30)" />
+                        <Package image="image 14.png" rating={4.8} paragraph="Group Mountain Biking" price={50} view="(2)" />
+
+                        </div>
+                </section>
+            )
+        };
+
+        function Package(props){
+            return(
+                
+                <div className="soldout">
+                            <img className="img1" src={props.image} alt="image 12.png"/>
+                            <p className="p1" >
+                                <img className="img2" src="star 1.png" alt="star 1.png"/>
+                                {props.rating}<span>{props.view}<img src="Ellipse 6.png" alt="Ellipse 6.png"/>USA</span> 
+                            </p>
+                            <p className="para">{props.paragraph}</p>
+                            <p className="person" ><b>From ${props.price}</b> / person</p>
+                        </div>
+                       
+
+            )
+        }
+    </script>
+</body>
+</html>
+<!-- 
+<div className="soldout">
+    <img className="img1" src="image 13.png" alt="image 13.png"/>
+    <p  className="p1" >
+        <img className="img2" src="star 1.png" alt="star 1.png"/>
+        5.0<span>(30)<img src="Ellipse 6.png" alt="Ellipse 6.png"/>USA</span>
+    </p>
+    <p className="para">Learn wedding photography</p>
+    <p className="person"><b>From $125</b> / person</p>
+</div>
+<div className="soldout">
+    <img className="img1" src="image 14.png" alt="image 14.png"/>
+    <p  className="p1" >
+        <img className="img2" src="star 1.png" alt="star 1.png"/>
+        5.0<span>(2)<img src="Ellipse 6.png" alt="Ellipse 6.png"/>USA</span>
+    </p>
+    <p className="para">Group Mountain Biking</p>
+    <p className="person"><b> From $50 </b>/ person</p>
+</div> -->

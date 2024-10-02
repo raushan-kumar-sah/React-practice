@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Class practice</title>
+    <link rel="stylesheet" href="react_onlinepractice.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        ReactDOM.render( 
+            <div class="container" >
+                <h1 align="center">Contact book</h1>
+                <Card fullname="Sashi bhushan kumar sah" ward={31} Address="Kathmandu" />
+                <Card fullname="Keshav kumar gami" ward={6} Address="Janakpur" />
+                <Card fullname="Roshan kr gami" ward={7} Address="Sarpallo"/>
+            </div>
+            ,document.getElementById("root")
+        );
+        function Card(props){
+            //console.log(props);
+            return(
+                <div class="contact">
+                    <b>Name:</b> {props.fullname} <br/>
+                    <b>Ward No.:</b> {props.ward} <br/>
+                    <b>Address:</b> {props.Address}
+                </div>
+            )
+        }
+    </script>
+</body>
+</html>

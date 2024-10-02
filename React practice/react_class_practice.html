@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My travel journal</title>
+    <link rel="stylesheet" href="react_class_practice.css">
+</head>
+<body>
+    <div id="travel"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        ReactDOM.render(
+            <div class="container">
+                <Head/>
+                <Main image="mount fuji.jpeg" cntry="JAPAN" city="Mount Fuji" date="12 Jan, 2021 - 24 Jan, 2021" para="Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists." />
+                <hr/>
+                <Main image="sydney opera house.jpeg" cntry="AUSTRALIA" city="Sydney Opera House" date="27 May, 2021 - 8 Jun, 2021" para="The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the banks of the Sydney Harbour, it is often regarded as one of the 20th century's most famous and distinctive buildings" />
+                <hr/>
+                <Main image="Geirangerfjord.jpeg" cntry="NORWAY" city="Geirangerfjord" date="01 Oct, 2021 - 18 Nov, 2021" para="The Geiranger Fjord is a fjord in the Sunnmøre region of Møre og Romsdal county, Norway. It is located entirely in the Stranda Municipality." />
+                <Fotter/>
+                </div>
+            ,document.getElementById("travel"))
+
+            function Head(){
+                return(
+                    <header>
+                        <div class="head">
+                            <i class="fa-solid fa-earth-americas"></i>
+                            <p>my travel journal.</p>
+                        </div>
+                    </header>
+                )
+            }
+            function Main(props){
+                return(
+                    <section>
+                        <div class="count">
+                            <div class="img">
+                                <img src={props.image} alt="image"/>
+                            </div>
+                            <div class="detail">
+                                <div class="c1">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    {props.cntry}
+                                    <a href="#">View on Google Maps</a>
+                                </div>
+                                <div class="country">
+                                    <h2>{props.city}</h2>
+                                    <h5>{props.date}</h5>
+                                    <p>{props.para}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                )
+            }
+            function Fotter(){
+                return(
+                    <div class="last">
+                        Coded with ❤️ by Emanuele Del Monte.
+                    </div>
+                )
+            }
+    </script>
+    <script src="https://kit.fontawesome.com/a0a82d836e.js" crossorigin="anonymous"></script>
+</body>
+</html>

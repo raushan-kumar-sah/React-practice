@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color: #ebebeb;
+}
+.contact{
+    display: inline-block;
+    padding: 30px;
+    margin: 30px;
+    box-shadow: 4px 4px 10px 5px rgba(0, 0, 0, 0.5);
+}
